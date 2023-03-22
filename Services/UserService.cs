@@ -38,7 +38,7 @@ namespace WebApi.Services
 
             // return null if user not found
             if (user == null)
-                return null;
+                throw new Exception("user not found.");
 
             // authentication successful so generate jwt token
             var tokenHandler = new JwtSecurityTokenHandler();
